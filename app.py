@@ -108,8 +108,6 @@ def login():
         }), 401
 
 
-    return jsonify(message='Invalid credentials'), 401
-
 def authenticate(f):
     @wraps(f)
     def decorated(*args, **kwargs):
