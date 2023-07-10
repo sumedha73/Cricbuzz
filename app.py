@@ -18,7 +18,7 @@ connection = pymysql.Connection(host='localhost',
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'this is a secret'
 print(SECRET_KEY)
-jwt_secret_key = 'dummy_jwt_secret_key'
+jwt_secret_key = '071889bc-03c4-4f12-9d3b-c55493dd5d89'
 
 
 from flask import Flask, jsonify, request
