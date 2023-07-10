@@ -5,10 +5,6 @@ import pymysql
 import jwt
 from functools import wraps
 
-## Links ref - https://github.com/safakozdek/Crud-App-Using-Flask-and-MySQL/blob/master/Code/app.py
-# https://github.com/psergicv/Restaurant-Management-System/tree/main
-# https://github.com/topics/flask-mysql
-# https://www.loginradius.com/blog/engineering/guest-post/securing-flask-api-with-jwt/
 
 app = Flask(__name__)
 
@@ -22,7 +18,7 @@ connection = pymysql.Connection(host='localhost',
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'this is a secret'
 print(SECRET_KEY)
-jwt_secret_key = 'your_jwt_secret_key'  # Replace with your own JWT secret key
+jwt_secret_key = 'dummy_jwt_secret_key'
 
 
 from flask import Flask, jsonify, request
@@ -49,7 +45,6 @@ def admin_signup():
         #     select_query = "SELECT COUNT(*) FROM User WHERE name = %s OR email = %s"
         #     cursor.execute(select_query, (username, email))
         #     user_exists = cursor.fetchone()
-        #
         # if user_exists:
         #     cursor.close()
         #     response_data = {
