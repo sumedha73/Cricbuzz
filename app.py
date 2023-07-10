@@ -1,12 +1,11 @@
 import datetime
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash, app, jsonify
+from flask import Flask, jsonify, request
+import hashlib
 import pymysql
 import jwt
 from functools import wraps
 
-
-app = Flask(__name__)
 
 connection = pymysql.Connection(host='localhost',
                              user='root',
@@ -19,11 +18,6 @@ connection = pymysql.Connection(host='localhost',
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'this is a secret'
 print(SECRET_KEY)
 jwt_secret_key = '071889bc-03c4-4f12-9d3b-c55493dd5d89'
-
-
-from flask import Flask, jsonify, request
-import hashlib
-import mysql.connector
 
 app = Flask(__name__)
 
